@@ -30,7 +30,8 @@ stages:
             azureSubscription: 'Ramesh Seshadri(4a5542b7-1678-4c93-8575-6a46de726931)'
             ScriptType: 'InlineScript'
             Inline: |
-            Install-Module Az.Resources -RequiredVersion 1.12.1-preview -AllowPrerelease -Force -Scope CurrentUser
+            Import-Module Sitecore.Cloud.Cmdlets.psm1
+            Import-Module Az.Accounts
             $Parameters = @{
             ResourcegroupName     = "RS-Sitecore-RG"
             Templatefile          = ".\StorageAccount\azuredeploy.json"
