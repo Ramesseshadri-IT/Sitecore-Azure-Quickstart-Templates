@@ -36,7 +36,6 @@ stages:
             Templatefile          = ".\StorageAccount\azuredeploy.json"
             TemplateParameterfile = ".\StorageAccount\azuredeploy.parameters.json"
             Mode                  = 'Incremental'
-              }
+                            }
             $Result = Get-AzResourceGroupDeploymentWhatIfResult 
-            condition: @Parameters
-          
+            @Parameters
