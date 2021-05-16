@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: sitecore 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sitecore
+  template:
+    metadata:
+      labels:
+        app: sitecore 
+    spec:
+      containers:
+        - name: sitecore 
+          image: acrsitecore.azurecr.io/sitecore
+          ports:
+          - containerPort: 0
