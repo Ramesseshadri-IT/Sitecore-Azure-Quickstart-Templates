@@ -7,10 +7,8 @@
     resourceGroupName: 'RS-Sitecore-RG'
     location: 'West Europe'
     templateLocation: 'URL of the file'
-    csmFileLink: 'https://raw.githubusercontent.com/Ramesseshadri-IT/Sitecore-Azure-Quickstart-Templates/blob/master/Sitecore%2010.1.0/XP/azuredeploy.json'
-    csmParametersFileLink: 'azuredeploy.parameters.json'
-    deploymentMode: 'Incremental'
-    deploymentName: 'rssitecoredeploy'
+    csmFileLink: 'https://github.com/Ramesseshadri-IT/Sitecore-Azure-Quickstart-Templates/blob/master/Sitecore%2010.1.0/XP/azuredeploy.json'
+    csmParametersFileLink: 'https://github.com/Ramesseshadri-IT/Sitecore-Azure-Quickstart-Templates/blob/master/Sitecore%2010.1.0/XP/azuredeploy.parameters.json'
     deploymentMode: 'Incremental'
     deploymentName: 'rssitecoredeploy'
 - task: ArchiveFiles@2
