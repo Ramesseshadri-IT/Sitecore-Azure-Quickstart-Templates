@@ -26,7 +26,7 @@ stages:
             deploymentMode: 'Incremental'
             deploymentName: 'rssitecoredeploy'
         - task: ArchiveFiles@2
-           inputs:
+          inputs:
             rootFolderOrFile: '$(Build.BinariesDirectory)'
             includeRootFolder: true
             archiveType: 'zip'
