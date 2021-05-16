@@ -37,12 +37,6 @@ stages:
             TemplateParameterfile = ".\StorageAccount\azuredeploy.parameters.json"
             Mode                  = 'Incremental'
               }
-            $Result = Get-AzResourceGroupDeploymentWhatIfResult @Parameters
-            $Result
-        - task: ArchiveFiles@2
-          inputs:
-            rootFolderOrFile: '$(Build.BinariesDirectory)'
-            includeRootFolder: true
-            archiveType: 'zip'
-            archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
-            replaceExistingArchive: true
+            $Result = Get-AzResourceGroupDeploymentWhatIfResult 
+            condition: @Parameters
+          
