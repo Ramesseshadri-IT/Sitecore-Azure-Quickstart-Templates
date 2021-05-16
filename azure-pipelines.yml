@@ -6,9 +6,9 @@
     action: 'Create Or Update Resource Group'
     resourceGroupName: 'RS-Sitecore-RG'
     location: 'West Europe'
-    templateLocation: 'URL of the file'
-    csmFileLink: 'https://github.com/Ramesseshadri-IT/Sitecore-Azure-Quickstart-Templates/blob/master/Sitecore%2010.1.0/XP/azuredeploy.json'
-    csmParametersFileLink: 'https://github.com/Ramesseshadri-IT/Sitecore-Azure-Quickstart-Templates/blob/master/Sitecore%2010.1.0/XP/azuredeploy.parameters.json'
+    templateLocation: 'Linked artifact'
+    csmFile: '$(Build.SourcesDirectory)/StorageAccount/azuredeploy.json'
+    csmParametersFile: '$(Build.SourcesDirectory)/StorageAccount/azuredeploy.parameters.json'
     deploymentMode: 'Incremental'
     deploymentName: 'rssitecoredeploy'
 - task: ArchiveFiles@2
