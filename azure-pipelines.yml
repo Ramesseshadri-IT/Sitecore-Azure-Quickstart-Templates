@@ -12,3 +12,23 @@ stages:
         pool:
           vmimage: windows-latest
         steps:
+        - task: AzureResourceManagerTemplateDeployment@3
+          inputs:
+            deploymentScope: 'Resource Group'
+            azureResourceManagerConnection: 'Ramesh Seshadri(4a5542b7-1678-4c93-8575-6a46de726931)'
+            subscriptionId: '4a5542b7-1678-4c93-8575-6a46de726931'
+            action: 'Create Or Update Resource Group'
+            resourceGroupName: 'RS-Sitecore-RG'
+            location: 'West Europe'
+            templateLocation: 'Linked artifact'
+            csmFile: '$(Build.SourcesDirectory)/StorageAccount/azuredeploy.json'
+            csmParametersFile: '$(Build.SourcesDirectory)/StorageAccount/azuredeploy.parameters.json'
+            deploymentMode: 'Incremental'
+            deploymentName: 'rssitecoredeploy'
+        - task: ArchiveFiles@2
+           inputs:
+            rootFolderOrFile: '$(Build.BinariesDirectory)'
+            includeRootFolder: true
+            archiveType: 'zip'
+            archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+            replaceExistingArchive: true
