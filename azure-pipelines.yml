@@ -10,7 +10,6 @@
     csmFileLink: 'https://raw.githubusercontent.com/Ramesseshadri-IT/Sitecore-Azure-Quickstart-Templates/tree/master/Sitecore%2010.1.0/XP'
     deploymentMode: 'Incremental'
     deploymentName: 'rssitecoredeploy'
-
 - task: ArchiveFiles@2
   inputs:
     rootFolderOrFile: '$(Build.BinariesDirectory)'
